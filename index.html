@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+    
     <title>Moch Agung Hermawan</title>
 </head>
 
@@ -28,9 +29,9 @@
     </div>
 
     <section class="hero is-fullheight page1">
-        <div class="hero-head ">
-            <nav class="navbar is-fixed-top is-transparent">
-                <div class="container ">
+        <div class="hero-head">
+            <nav role="navigation" class="navbar is-fixed-top">
+                <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item">
                             Mocha
@@ -56,10 +57,11 @@
                     </div>
                 </div>
             </nav>
+            
         </div>
 
-        <div class="hero-body">
-            <div class="columns tengah">
+        <div class="hero-body center">
+            <div class="columns">
                 <div class="column single-spaced" style="top: 150px;">
                     <h1 class="title is-1 has-text-centered">
                         Moch Agung Hermawan
@@ -70,10 +72,10 @@
                     </h4>
                     <div class="level">
                         <div class="level-item">
-                            <a href="#" class="button is-large"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="button is-large"><i class="fab fa-github"></i></a>
-                            <a href="#" class="button is-large"><i class="fab fa-codepen"></i></a>
-                            <a href="#" class="button is-large"><i class="fa facebook"></i></a>
+                            <a href="fb.com/mochagungh" target="_blank" class="button is-large"><i class="fab fa-facebook"></i></a>
+                            <a href="github.com/mochagungh" target="_blank" class="button is-large"><i class="fab fa-github"></i></a>
+                            <a href="codepen.io/mochagungh" target="_blank" class="button is-large"><i class="fab fa-codepen"></i></a>
+                            <a href="#" target="_blank" class="button is-large"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -81,17 +83,17 @@
         </div>
         <div class="hero-foot">
             <div class="columns is-multiline">
-                <div class="column is-full center">
-                    <p class="subtitle has-text-centered is-5">more</p>
+                <div class="column is-full">
+                    <p class="subtitle has-text-centered has-text-white-ter is-5">let's dive</p>
                 </div>
                 <div class="column center">
-                    <a href="#" class="button is-small"><i class="fas fa-angle-double-down"></i></a>
+                    <a href="#pageterakhir" class="button is-large learn-more"><i class="fas fa-angle-double-down"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section page2">
+    <section id="page2" class="section page2">
         <div class=" hero is-fullheight page2">
             <div class="tile is-ancestor">
                 <div class="tile is-parent is-6">
@@ -193,7 +195,7 @@
         </div>
     </section>
 
-    <section class="section hero is-large page4">
+    <section id="pageterakhir" class="section hero is-large page4">
         <div class="tile is-ancestor is-parent">
             <div class="tile"></div>
             <div class="tile is-child is-8 is-offset-4">
@@ -219,11 +221,9 @@
                     <label class="label">Email</label>
                     <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
                 </div>
-                <div class="control">
-                    <button class="button is-primary">Submit</button>
+                <div class="control center">
+                    <button class="button is-medium is-primary is-focused">Submit</button>
                 </div>
-
-
             </div>
             <div class="tile"></div>
         </div>
@@ -242,6 +242,10 @@
             </a>
         </div>
     </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 
