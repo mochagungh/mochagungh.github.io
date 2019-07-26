@@ -1,5 +1,9 @@
+html , body {
+    margin: 0;
+    padding: 0;
+}
 .page1 {
-    background: url(images/welcome.jpg) no-repeat center center;
+    background: url(images/intro.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,10 +13,10 @@
     background: transparent !important;
 }
 .button:hover {
-    background: rgba(30, 11, 100, 0.418) !important;
+    background: #86f1fe !important;
 }
 .title {
-    color: rgb(199, 218, 197) !important;
+    color: white !important   ;
     font-weight: bold;
 }
 .button {
@@ -38,7 +42,7 @@
     max-width: 100%;
     max-height: 180px;
 }
-.burgerku {
+/* .burgerku {
     z-index: 100;
     position: fixed;
     top: 0;
@@ -53,9 +57,16 @@
     background-color: rgba(255, 255, 255, .95);
     overflow-y: hidden;
     transition: .4s;
+} */
+.page2 {
+    background: linear-gradient(to bottom,  rgb(20, 62, 78) 40%, rgb(15, 46, 58)) !important;
 }
-
-
+.page3 {
+    background: linear-gradient(to bottom, rgb(15, 46, 58) 40%, rgb(11, 32, 41)) !important;
+}
+.page4 {
+    background: linear-gradient(to bottom, rgb(11, 32, 41) 40%, rgb(9, 26, 34)) !important;
+}
 
 
 
@@ -64,13 +75,13 @@
 
 @media (max-width: 1024px) {
     .page1 {
-        background: url(images/welcome.jpg) center / cover;
+        background: url(images/intro.jpg) center / cover;
     }
 }
 
 @media (max-width: 768px) {
     .page1 {
-        background: url(images/welcome.jpg) center / cover;
+        background: url(images/intro.jpg) center / cover;
     }
 }
 
