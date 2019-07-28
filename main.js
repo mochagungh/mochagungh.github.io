@@ -1,58 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
-            });
-        });
-    }
-
+const fakeloader = document.getElementsByClassName('floader')[0];
+window.addEventListener('load',function(){
+    fakeloader.style.display="none"; 
 });
 
 $(document).ready(function () {
+
+    // Ganti warna navbar saat scroll
     $(window).scroll(function () {
+        const scroll = $(document).scrollTop();
 
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= 500) {
-            $("nav").addClass("navbar-after", "is-black");
+        if (scroll >= 550) {
+            $("nav").addClass("navbar-after"),
+            $(".nav-brand > .nav-item").addClass("warna");
         } else {
-            $("nav").removeClass("is-transparent")
+            $("nav").removeClass("navbar-after"),
+            $(".nav-brand > .nav-item").removeClass("warna");
         }
     });
 
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function () {
 
-    $('.learn-more').on('click', function (e) {
-        var href = $(this).attr('href');
-        var elemenHref = $(tujuan);
-        
-        $('body').animate({
-            scrollTop: elemenHref.offset().top - 400
-        });
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
 
-        e.preventDefaulf();
     });
 
+    // $('.learn-more').on('click', function (e) {
+    //     var elemenHref = $(tujuan);
+
+    //     $('body').animate({
+    //         scrollTop: elemenHref.offset().top - 400
+    //     });
+
+    //     e.preventDefaulf();
+    // });
 });
 
 
-// if($(window).scrollTop() > 50){
-//     $(".header").addClass("active");
-// } else {
-//     $(".header").removeClass("active");
-// }
+// parallax prototype
+// window.addEventListener('scroll', function(e){
+//     var scrolled = window.pageYOffset;
+//     var background = document.querySelector(".page1");
+//     var coords = '0% '+ (- (scrolled *0.3) + 'px');
+//     background.style.backgroundPosition  = coords;
+//     });

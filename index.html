@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="my_library.css">
-    <!-- <link rel="stylesheet" href="debug.css"> -->
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -16,27 +14,31 @@
     <link rel="manifest" href="/site.webmanifest">
     <!-- favicon -->
 
+    <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma CSS -->
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <title>Moch Agung Hermawan</title>
 </head>
 
 <body>
-    <div class="preloader">
-
+    <div class="hero is-fullheight floader">
+    <div class="fakeloader">
     </div>
-
-    <section class="hero is-fullheight page1">
+</div>
+<main>
+    <section id="intro" class="hero is-fullheight intro">
         <div class="hero-head">
-            <nav role="navigation" class="navbar is-fixed-top">
+            <nav role="navigation" class="navbar is-fixed-top is-transparent">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item">
-                            Mocha
+                        <a href="#intro" class="navbar-item">
+                            Moch Agung
                         </a>
-                        <span class="navbar-burger burger burgerku" data-target="navbarMenuHero">
+                        <span class="navbar-burger" data-target="navbarMenuHero">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -44,13 +46,13 @@
                     </div>
                     <div id="navbarMenuHero" class="navbar-menu ">
                         <div class="navbar-end ">
-                            <a class="navbar-item is-active">
+                            <a href="#profile" class="navbar-item ">
                                 Profile
                             </a>
-                            <a class="navbar-item">
+                            <a href="#project" class="navbar-item">
                                 Project
                             </a>
-                            <a class="navbar-item">
+                            <a href="#contact" class="navbar-item">
                                 Contact
                             </a>
                         </div>
@@ -72,7 +74,7 @@
                     </h4>
                     <div class="level">
                         <div class="level-item">
-                            <a href="fb.com/mochagungh" target="_blank" class="button is-large"><i class="fab fa-facebook"></i></a>
+                            <a href="https://fb.com/mochagungh" target="_blank" class="button is-large"><i class="fab fa-facebook"></i></a>
                             <a href="github.com/mochagungh" target="_blank" class="button is-large"><i class="fab fa-github"></i></a>
                             <a href="codepen.io/mochagungh" target="_blank" class="button is-large"><i class="fab fa-codepen"></i></a>
                             <a href="#" target="_blank" class="button is-large"><i class="fab fa-linkedin"></i></a>
@@ -87,22 +89,21 @@
                     <p class="subtitle has-text-centered has-text-white-ter is-5">let's dive</p>
                 </div>
                 <div class="column center">
-                    <a href="#pageterakhir" class="button is-large learn-more"><i class="fas fa-angle-double-down"></i></a>
+                    <a href="#contact" class="button is-large learn-more"><i class="fas fa-angle-double-down"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="page2" class="section page2">
-        <div class=" hero is-fullheight page2">
+    <section id="profile" class="section profile">
+        <div class=" hero is-fullheight profile">
             <div class="tile is-ancestor">
                 <div class="tile is-parent is-6">
                     <article class="tile is-child box">
                         <p class="title">My Profile</p>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
-                                pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
-                                feugiat facilisis.
+                            <p>
+                                As Front end developer 
                             </p>
                         </div>
                     </article>
@@ -122,13 +123,13 @@
         </div>
     </section>
 
-    <section class="section hero is-fullheight page3">
+    <section id="project" class="section hero is-fullheight project">
         <div class="container ">
             <div class="columns is-multiline">
                 <div class="column is-full">
                     <p class="title">Project</p>
                 </div>
-                <div class="column is-one-third">
+                <div class="column is-one-third column-h">
                     <div class="card">
                         <div class="card-content">
                             <figure class="image">
@@ -149,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-one-third">
+                <div class="column is-one-third column-h">
                     <div class="card">
                         <div class="card-content">
                             <figure class="image">
@@ -170,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-one-third">
+                <div class="column is-one-third column-h">
                     <div class="card">
                         <div class="card-content">
                             <figure class="image">
@@ -195,57 +196,29 @@
         </div>
     </section>
 
-    <section id="pageterakhir" class="section hero is-large page4">
-        <div class="tile is-ancestor is-parent">
-            <div class="tile"></div>
-            <div class="tile is-child is-8 is-offset-4">
-                <div>
-                    <p class="title has-text-centered">
-                        Let's Get Quote
-                    </p>
-                </div>
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="e.g John Cena">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control">
-                        <input class="input" type="email" placeholder="e.g. johncena@gmail.com">
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Email</label>
-                    <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
-                </div>
-                <div class="control center">
-                    <button class="button is-medium is-primary is-focused">Submit</button>
-                </div>
-            </div>
-            <div class="tile"></div>
-        </div>
+    <section id="contact" class="section hero is-large has-text-left contact">
+        <p class="title is-1"> <i class="far fa-hand-point-right"></i> Get in Touch</p>
+        <br>
+        <p class="subtitle is-3">
+            Say <a href="mailto:mochagungh@gmail.com" class="text-hover">hi</a> or find me on other Platform : 
+            <a href="https://facebook.com/mochagungh" target="_blank" rel="noopener noreferrer" class="text-hover">Facebook</a>
+            or <a href="https://github.com/mochagungh" target="_blank" rel="noopener noreferrer" class="text-hover">Github</a>
+        </p>
     </section>
+</main>
 
-    <footer>
-        <div class="hero is-medium is-black has-text-centered">
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae natus porro similique itaque harum? Rem
-                minima ipsam nemo. Delectus in quo sint. Sequi aliquid tempora laudantium provident eaque, perferendis
-                sint?
-            </p>
-            <a href="https://bulma.io">
-                <img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128"
-                    height="24">
-            </a>
-        </div>
-    </footer>
+<footer>
+    <div class="hero is-medium is-black has-text-centered">
+        <p>
+            &copy; copyright 2019 | Moch Agung Hermawan
+        </p>
+        <a href="https://bulma.io">
+            <img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128"
+                height="24">
+        </a>
+    </div>
+</footer>
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 
