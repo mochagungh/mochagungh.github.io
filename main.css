@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 @import url('my_library.css');
+@import url('animate.css');
 /* @import url('debug.css'); */
 
 :root {
@@ -15,14 +16,15 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lora' , 'Ubuntu' , sans-serif !important;
+    font-family: 'Lora', 'Ubuntu', sans-serif !important;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* ^ only support on chrome & firefox -__-" ,, use Js as alternative */
+    scroll-behavior: smooth; /* ^ only support on chrome & firefox -__-" ,, use Js as alternative */
 }
+
 .floader {
     background-color: var(--darkblue);
 }
+
 .fakeloader {
     width: 70px;
     height: 70px;
@@ -31,12 +33,11 @@ body {
     border-bottom-color: var(--blue);
     border-radius: 100%;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 45%;
+    left: 45%;
     animation: putar 1.5s linear infinite;
 }
+
 .intro {
     background: url(images/intro.jpg) no-repeat center center;
     -webkit-background-size: cover;
@@ -44,53 +45,65 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-.navbar-brand > .navbar-item {
+
+.navbar-brand>.navbar-item {
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
     font-size: 1.6em;
 }
+
 .warna {
     color: #0b2029 !important;
 }
+
 .navbar-after {
     background: linear-gradient(35deg, var(--lightblue) 10%, #015763 90%) !important;
-    color: var(--white) ;
+    color: var(--white);
     transition: ease-in-out;
     transition-duration: .75s;
 }
+
 .navbar-item {
     color: var(--white) !important;
     font-weight: bold;
 }
+
 .navbar-item:hover {
     color: var(--darkblue) !important;
     font-weight: bold;
 }
+
 .navbar-burger {
     color: var(--blue) !important;
 }
+
 .is-active {
     background: linear-gradient(35deg, #003f47 10%, var(--lightblue) 90%) !important;
 }
+
 .title {
     color: var(--white) !important;
     font-weight: bold;
 }
+
 .subtitle {
-    color: rgba(255, 255, 255,0.85) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
-.level-item > .button {
+
+.level-item>.button {
     color: #070707 !important;
     margin: 0 10px;
     padding: 20px !important;
     background-color: rgba(103, 209, 209, 0.7) !important;
 }
-.level-item > .button:hover {
+
+.level-item>.button:hover {
     background: var(--lightblue) !important;
     border: none;
     box-shadow: rgba(62, 202, 191, 0.4) 0px -2px 21.5px 12px;
     transition-delay: .095s;
 }
+
 .learn-more {
     background: transparent !important;
     border: none !important;
@@ -98,46 +111,55 @@ body {
     color: var(--white) !important;
     animation: learn-more 1.7s infinite 0s ease-in;
 }
+
 article>.title {
     color: rgba(9, 26, 34, 0.75) !important;
 }
-.content > .columns {
+
+.content>.columns {
     margin-top: -40px;
 }
+
 .card {
     border: 4px solid rgb(37, 179, 179);
     margin: 1rem;
     border-radius: 8px;
 }
-.card-footer > a {
+
+.card:hover {
+    box-shadow: rgba(62, 202, 191, 0.4) 0px -2px 19px 10px;
+}
+
+.card-footer>a {
     color: var(--darkblue) !important;
 }
 
 .card-footer {
     background-color: rgb(37, 179, 179) !important;
 }
-.baru {
-    display: block;
-    max-width: 100%;
-    max-height: 180px;
-}
+
 .profile {
     background: linear-gradient(to bottom, #143e4e 40%, #0f2e3a) !important;
 }
+
 .project {
     background: linear-gradient(to bottom, #0f2e3a 40%, #0b2029) !important;
 }
+
 .contact {
     background: linear-gradient(to bottom, #0b2029 40%, #091a22) !important;
 }
+
 .contact p a {
     color: var(--blue);
 }
+
 .text-hover {
     display: inline-block;
     position: relative;
     color: var(--blue);
 }
+
 .text-hover::after {
     content: '';
     position: absolute;
@@ -150,15 +172,23 @@ article>.title {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+
 .text-hover:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
 @keyframes putar {
-    from{transform: rotate(0deg)}
-    to{transform: rotate(360deg)}
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
 
 }
+
 @keyframes learn-more {
     40% {
         transform: rotate(xx);
@@ -170,6 +200,7 @@ article>.title {
         opacity: 1;
     }
 }
+
 @media (max-width: 1024px) {
     .page1 {
         background: url(images/intro.jpg) center / cover;

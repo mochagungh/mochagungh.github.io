@@ -5,16 +5,14 @@ window.addEventListener('load',function(){
 
 $(document).ready(function () {
 
-    // Ganti warna navbar saat scroll
+    // Change navbar color on scroll
     $(window).scroll(function () {
         const scroll = $(document).scrollTop();
 
         if (scroll >= 550) {
-            $("nav").addClass("navbar-after"),
-            $(".nav-brand > .nav-item").addClass("warna");
+            $("nav").addClass("navbar-after");
         } else {
-            $("nav").removeClass("navbar-after"),
-            $(".nav-brand > .nav-item").removeClass("warna");
+            $("nav").removeClass("navbar-after");
         }
     });
 
@@ -26,16 +24,6 @@ $(document).ready(function () {
         $(".navbar-menu").toggleClass("is-active");
 
     });
-
-    // $('.learn-more').on('click', function (e) {
-    //     var elemenHref = $(tujuan);
-
-    //     $('body').animate({
-    //         scrollTop: elemenHref.offset().top - 400
-    //     });
-
-    //     e.preventDefaulf();
-    // });
 });
 
 
