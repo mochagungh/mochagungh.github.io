@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     /* colors */
   :root {
-    --background-color: #011700;
-    --green: hsl(152, 25%, 53%);
+    --background-color: #162a2b;
+    --green: #55efc4;
     --translucentGreen: hsla(153, 36%, 59%, 0.6);
 
     /* sizing */
@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-        background: rgba(255, 210, 57, 0.2);
+        background: #7bed9f;
         text-shadow: black 1px 1px 0px;
     }
 
