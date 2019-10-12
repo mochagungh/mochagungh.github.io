@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-// import styled from 'styled-components';
-import GlobalStyles from './components/GlobalStyles/index';
+import React, { useState, useEffect } from 'react';
+import { GlobalStyles } from './components/GlobalStyles/index';
 import Navbar from './components/Navbar/index';
 
 function Layout() {
-  const [isApp, setIsApp] = React.useState(false);
+  const [isApp, setIsApp] = useState(false);
   useEffect(
     () =>
       setIsApp(
