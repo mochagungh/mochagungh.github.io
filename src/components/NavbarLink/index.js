@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
+  color: #7bed9f;
   transition: all 100ms ease-in-out;
   position: relative;
   user-select: none;
@@ -10,7 +12,7 @@ const StyledLink = styled.a`
   text-align: center;
   font-weight: bold;
   font-size: 92.5%;
-  line-height: 1;
+  line-height: 2;
   text-decoration: none;
   padding: 0.45rem 0.9rem;
   margin: 0.5rem 0;
@@ -51,8 +53,9 @@ const InnerWrapper = styled.div`
   }
 `;
 
-const Caption = styled.span`
+const Label = styled.span`
   font-size: 0.95rem;
+  text-decoration: none;
   text-transform: uppercase;
   display: block;
 
@@ -65,8 +68,10 @@ function NavbarLink(props) {
   return (
     <StyledLink>
       <InnerWrapper>
-        <FontAwesomeIcon icon={props.icon}></FontAwesomeIcon>
-        <Caption>{props.label}</Caption>
+        <StyledLink to={props.to}>
+          <FontAwesomeIcon icon={props.icon}></FontAwesomeIcon>
+          <Label>{props.label}</Label>
+        </StyledLink>
       </InnerWrapper>
     </StyledLink>
   );
