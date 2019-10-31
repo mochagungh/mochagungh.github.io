@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   padding: 0.45rem 0.9rem;
   margin: 0.5rem 0;
   display: flex;
@@ -25,18 +25,14 @@ const StyledLink = styled(Link)`
     color: var(--neon);
   }
 
-  &:active {
-    color: var(--neon);
-  }
-
-  &:focus {
+  &.isActive {
     color: var(--neon);
   }
 
   @media (max-width: 1100px) {
     width: 2ch;
     padding: 0.45rem 1.5rem;
-    color: #00bcd4;
+    color: var(--neon);
   }
 
   @media (max-width: 700px) {
@@ -73,7 +69,7 @@ function NavbarLink(props) {
   const { to, icon, label } = props;
   return (
     <InnerWrapper>
-      <StyledLink to={to}>
+      <StyledLink exact={true} to={to} activeClassName="isActive">
         <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
         <Label>{label}</Label>
       </StyledLink>
