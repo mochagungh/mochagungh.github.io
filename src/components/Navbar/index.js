@@ -26,7 +26,7 @@ const NavbarWrapper = styled.nav`
     right: 0;
     bottom: 0;
     box-shadow: 2px 0 2px black;
-    background-color: #218c74;
+    background: #1f5189;
     padding-left: var(--responsive-padding);
     padding-right: var(--responsive-padding);
     padding-bottom: var(--safe-area-inset-bottom);
@@ -59,7 +59,7 @@ const InnerNavbarWrapper = styled.div`
   }
 `;
 
-function Navbar(props) {
+function Navbar() {
   return (
     <NavbarWrapper>
       <InnerNavbarWrapper>

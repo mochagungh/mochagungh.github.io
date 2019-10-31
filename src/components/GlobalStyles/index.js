@@ -5,8 +5,10 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --green: #7bed9f;
     --dark-green: #162a2b;
-    --dark-green-nav: #1a383a;
+    --dark-green-nav: #204547;
+    --dark-grey: rgba(42, 42, 42, 1);
     --light-green: #55efc4;
+    --neon: rgba(3, 235, 255, 1);
     --translucentGreen: hsla(153, 36%, 59%, 0.6);
 
     /* sizing */
@@ -34,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-        background: #7bed9f;
+        background: var(--green);
         text-shadow: black 1px 1px 0px;
     }
 
@@ -50,8 +52,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: var(--dark-green);
-    color: var(--green);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(3,235,255,1) 0%, rgba(152,70,242,1) 100.2% );
+    /* background-image: linear-gradient( 115.7deg,  rgba(3,79,135,1) 6.2%, rgba(0,184,214,1) 112.9% ); */
+    
+    color: var(--dark-grey);
     font-family: var(--primaryFont);
     font-feature-settings: 'calt' 1;
     font-variant-ligatures: contextual;

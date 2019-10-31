@@ -10,7 +10,7 @@ const StyledLink = styled(Link)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  color: var(--green);
+  color: var(--dark-grey);
   transition: all 80ms ease-in-out;
   position: relative;
   user-select: none;
@@ -22,19 +22,27 @@ const StyledLink = styled(Link)`
   border-radius: 10px;
 
   &:hover {
-    color: var(--green);
+    color: var(--neon);
+  }
+
+  &:active {
+    color: var(--neon);
+  }
+
+  &:focus {
+    color: var(--neon);
   }
 
   @media (max-width: 1100px) {
     width: 2ch;
     padding: 0.45rem 1.5rem;
-    color: var(--dark-green-nav);
+    color: #00bcd4;
   }
 
   @media (max-width: 700px) {
     padding: 0.35rem 1.5rem;
     margin: 0.3rem 0;
-    color: var(--dark-green-nav);
+    color: #eceff1;
   }
 `;
 
@@ -62,15 +70,14 @@ const Label = styled.span`
 `;
 
 function NavbarLink(props) {
+  const { to, icon, label } = props;
   return (
-    <StyledLink>
-      <InnerWrapper>
-        <StyledLink to={props.to}>
-          <FontAwesomeIcon icon={props.icon}></FontAwesomeIcon>
-          <Label>{props.label}</Label>
-        </StyledLink>
-      </InnerWrapper>
-    </StyledLink>
+    <InnerWrapper>
+      <StyledLink to={to}>
+        <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+        <Label>{label}</Label>
+      </StyledLink>
+    </InnerWrapper>
   );
 }
 export default NavbarLink;
