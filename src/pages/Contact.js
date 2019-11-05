@@ -6,7 +6,7 @@ import { PageWrapper } from '../container/PageWrapper';
 const StyledLink = styled.a`
   display: inline-block;
   position: relative;
-  color: #ffb300;
+  color: var(--bestYellow);
   text-decoration: none;
   font-weight: bold;
   text-shadow: black 1px 2px 0px;

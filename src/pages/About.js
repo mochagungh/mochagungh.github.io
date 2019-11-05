@@ -4,7 +4,7 @@ import { Main } from '../container/Main';
 import { PageWrapper } from '../container/PageWrapper';
 
 const StyledSpan = styled.span`
-  color: #ffb300;
+  color: var(--bestYellow);
   background: var(--darkGrey);
   border-radius: 4px;
   padding: 0.2em;

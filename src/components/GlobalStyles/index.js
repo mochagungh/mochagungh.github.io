@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     --lightDreen: #55efc4;
     --neon: rgba(3, 235, 255, 1);
     --translucentGreen: hsla(153, 36%, 59%, 0.6);
+    --bestYellow: #ffb300;
 
     /* sizing */
     --responsive-padding: 3.5rem;
