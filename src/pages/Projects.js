@@ -1,12 +1,15 @@
 import React from 'react';
 import { Main } from '../container/Main';
+import { PageWrapper } from '../container/PageWrapper';
 
-const Projects = () => {
+function Projects() {
   return (
     <Main>
-      <h1>Page Project</h1>
+      <PageWrapper>
+        <h1>Page Project</h1>
+      </PageWrapper>
     </Main>
   );
-};
+}
 
 export default Projects;

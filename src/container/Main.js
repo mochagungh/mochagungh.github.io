@@ -21,7 +21,7 @@ export const Main = styled.div`
     );
   }
 
-  @media only screen and (max-width: 700px) {
+  /* @media only screen and (max-width: 700px) {
     padding: calc(
       0.5rem + var(--responsive-padding) + var(--safe-area-inset-top)
     );
@@ -34,5 +34,5 @@ export const Main = styled.div`
     padding-left: calc(var(--responsive-padding) + var(--safe-area-inset-left));
     font-size: 21px;
     margin-bottom: 3.5rem;
-  }
+  } */
 `;

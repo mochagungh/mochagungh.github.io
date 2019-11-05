@@ -1,21 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { GlobalStyles } from './components/GlobalStyles/index';
 import Navbar from './components/Navbar/index';
+import { Main } from './container/Main';
 
 function Layout() {
-  const [isApp, setIsApp] = useState(false);
-  useEffect(
-    () =>
-      setIsApp(
-        'standalone' in window.navigator && window.navigator['standalone']
-      ),
-    []
-  );
-
   return (
     <>
-      <GlobalStyles isApp={isApp} />
+      <GlobalStyles />
       <Navbar />
+      <Main></Main>
     </>
   );
 }

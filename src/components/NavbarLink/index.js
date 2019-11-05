@@ -27,18 +27,31 @@ const StyledLink = styled(NavLink)`
 
   &.isActive {
     color: var(--neon);
+    @media (max-width: 1100px) {
+      color: #ffb300;
+    }
+
+    @media (max-width: 700px) {
+      color: #ffb300;
+    }
   }
 
   @media (max-width: 1100px) {
     width: 2ch;
     padding: 0.45rem 1.5rem;
-    color: var(--neon);
+    color: #eceff1;
+    &:hover {
+      color: #ffb300;
+    }
   }
 
   @media (max-width: 700px) {
     padding: 0.35rem 1.5rem;
     margin: 0.3rem 0;
     color: #eceff1;
+    &:hover {
+      color: #ffb300;
+    }
   }
 `;
 
@@ -65,8 +78,7 @@ const Label = styled.span`
   }
 `;
 
-function NavbarLink(props) {
-  const { to, icon, label } = props;
+function NavbarLink({ to, icon, label }) {
   return (
     <InnerWrapper>
       <StyledLink exact={true} to={to} activeClassName="isActive">
