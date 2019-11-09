@@ -1,7 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+
 import { Main } from '../container/Main';
 import { PageWrapper } from '../container/PageWrapper';
+import SocialButton from '../components/SocialButton';
 
 const StyledP = styled.p`
   margin: 0;
@@ -67,6 +69,7 @@ function About() {
             <StyledSpan>Moch Agung Hermawan</StyledSpan>
           </h3>
           <h4>a front web developer</h4>
+          <SocialButton />
         </PageWrapper>
       </Main>
     </>
