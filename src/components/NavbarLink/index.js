@@ -28,11 +28,11 @@ const StyledLink = styled(NavLink)`
   &.isActive {
     color: var(--neon);
     @media (max-width: 1100px) {
-      color: var(--bestYellow);
+      color: var(--neon);
     }
 
     @media (max-width: 700px) {
-      color: var(--bestYellow);
+      color: var(--neon);
     }
   }
 
@@ -41,7 +41,7 @@ const StyledLink = styled(NavLink)`
     padding: 0.45rem 1.5rem;
     color: #eceff1;
     &:hover {
-      color: var(--bestYellow);
+      color: var(--neon);
     }
   }
 
@@ -50,7 +50,7 @@ const StyledLink = styled(NavLink)`
     margin: 0.3rem 0;
     color: #eceff1;
     &:hover {
-      color: var(--bestYellow);
+      color: var(--neon);
     }
   }
 `;
