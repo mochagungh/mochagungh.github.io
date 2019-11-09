@@ -38,8 +38,10 @@ const StyledSpan = styled.span`
   background: var(--darkGrey);
   color: var(--bestYellow);
   border-radius: 6px;
-  padding: 0.5em;
-  margin-left: 0.2em;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  margin-left: 0.3em;
+
   @media (max-width: 700px) {
     margin-top: 1.3rem;
     padding: 0.5rem;
@@ -55,7 +57,7 @@ function About() {
         <PageWrapper>
           <h2>Hello there !</h2>
           <h3 style={{ display: 'flex' }}>
-            <StyledP>
+            <StyledP aria-label="i'm">
               <BouncingI>.</BouncingI>
               <span style={{ display: 'inline-block' }}>
                 <StyledI>ı</StyledI>
