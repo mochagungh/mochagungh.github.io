@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faCodepen,
   faLinkedinIn,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons';
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 const Wrapper = styled.div`
   margin-left: -1rem;
@@ -30,7 +30,7 @@ const Icon = styled.a`
   cursor: pointer;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 60px;
     height: 60px;
@@ -57,16 +57,19 @@ const Icon = styled.a`
 function SocialButton() {
   return (
     <Wrapper>
-      <Icon>
+      <Icon href="https://fb.me/mochagungh" target="_blank">
         <FIcon icon={faFacebookF}></FIcon>
       </Icon>
-      <Icon>
-        <FIcon icon={faTwitter}></FIcon>
+      <Icon href="https://github.com/mochagungh" target="_blank">
+        <FIcon icon={faGithub}></FIcon>
       </Icon>
-      <Icon>
+      <Icon
+        href="https://id.linkedin.com/in/moch-agung-91121b166"
+        target="_blank"
+      >
         <FIcon icon={faLinkedinIn}></FIcon>
       </Icon>
-      <Icon>
+      <Icon href="https://codepen.io/Lasto" target="_blank">
         <FIcon icon={faCodepen}></FIcon>
       </Icon>
     </Wrapper>
