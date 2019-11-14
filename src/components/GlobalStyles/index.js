@@ -62,6 +62,17 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 24px;
     word-spacing: -0.25ch;
     line-height: 1.4;
+
+    &:before {
+      content: "";
+      position: fixed;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 1);
+      z-index: 100;
+    }
   }
 
   @media only screen and (max-width: 700px) {
